@@ -1,8 +1,8 @@
-# Nano Banana Pro - AI Image Analysis App
+# Deepfake Image Detector (Nano Banana Pro)
 
 A high-aesthetic web application leveraging **Google Gemini 3 Pro** and **Gemini 2.0 Flash** agents to perform advanced AI forensics and web integrity checks on images.
 
-![App Screenshot](https://via.placeholder.com/800x400?text=Nano+Banana+Pro+UI+Preview)
+![App Screenshot](https://via.placeholder.com/800x400?text=Deepfake+Image+Detector+UI)
 
 ## 🚀 Features
 
@@ -17,8 +17,8 @@ A high-aesthetic web application leveraging **Google Gemini 3 Pro** and **Gemini
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/nano-banana-pro.git
-    cd nano-banana-pro/nano_banana_app
+    git clone https://github.com/yourusername/deepfakeimagedetector.git
+    cd deepfakeimagedetector
     ```
 
 2.  **Install Dependencies**:
