@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Banana Pro - AI Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nano Banana <span class="highlight">Pro</span></h1>
+            <p>Advanced AI Forensics & Web Integrity Checker</p>
+        </header>
+
+        <main>
+            <div class="upload-section" id="drop-zone">
+                <div class="upload-content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Upload Icon" class="upload-icon">
+                    <h3>Drag & Drop or Click to Upload</h3>
+                    <p>Supports JPG, PNG</p>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                </div>
+                <!-- Image Preview -->
+                <div id="preview-container" class="hidden">
+                    <img id="image-preview" src="" alt="Preview">
+                    <button id="remove-btn">✕</button>
+                </div>
+            </div>
+
+            <button id="analyze-btn" class="glow-button" disabled>Analyze Image</button>
+
+            <!-- Loading State -->
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Agents are processing...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results-grid hidden">
+                <!-- Gemini Agent Card -->
+                <div class="card gemini-card">
+                    <div class="card-header">
+                        <div class="agent-icon">✨</div>
+                        <h2>Gemini Agent</h2>
+                        <span class="role">AI Generation Detection</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="result-row">
+                            <span class="label">Is AI Generated?</span>
+                            <span id="gemini-verdict" class="value badge">--</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="label">Confidence</span>
+                            <div class="progress-bar-bg">
+                                <div id="gemini-confidence" class="progress-bar-fill" style="width: 0%"></div>
+                            </div>
+                            <span id="gemini-score">0%</span>
+                        </div>
+                        <div class="reasoning-box">
+                            <h4>Analysis</h4>
+                            <p id="gemini-reasoning">Waiting for analysis...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Image Web Checker Agent Card -->
+                <div class="card checker-card">
+                    <div class="card-header">
+                        <div class="agent-icon">🛡️</div>
+                        <h2>Web Checker</h2>
+                        <span class="role">Misuse & Integrity Check</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="result-row">
+                            <span class="label">Misuse Detected?</span>
+                            <span id="checker-verdict" class="value badge">--</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="label">Risk Level</span>
+                            <span id="checker-risk" class="value unknown">Unknown</span>
+                        </div>
+                        <div class="reasoning-box">
+                            <h4>Details</h4>
+                            <p id="checker-details">Waiting for check...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Google Gemini & Nano Banana Tech</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
