@@ -2,7 +2,8 @@
 
 A high-aesthetic web application leveraging **Google Gemini 3 Pro** and **Gemini 2.0 Flash** agents to perform advanced AI forensics and web integrity checks on images.
 
-![App Screenshot](https://via.placeholder.com/800x400?text=Deepfake+Image+Detector+UI)
+<img width="1437" height="674" alt="Screenshot 2026-01-04 at 11 12 53" src="https://github.com/user-attachments/assets/d50d8fd7-a9ce-4891-8bde-d87a7d6af6c3" />
+
 
 ## 🚀 Features
 
